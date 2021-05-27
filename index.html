@@ -26,11 +26,17 @@
     const creatingCells = function()
     {
         let numberOfCells = 77; 
-        for (let i = 0; i < numberOfCells; i++) 
+        for (let i = 0; i < 11; i++) 
         {
-            let cell = document.createElement("td");
-            let newCell = document.getElementById("Cells").appendChild(cell);
+            let row = document.createElement("tr");
+            let newRow = document.getElementById("Cells").appendChild(row)
+            for (let j = 0; j < 11; j++)
+            {
+            let column = document.createElement("td");
+            
+            let newCell = document.getElementById("Cells").appendChild(column) ;
             newCell.innerText = i;
+            }
         }
     }
 
@@ -38,7 +44,7 @@
     {
         let randomNumber = Math.floor(Math.random() * 77);
         console.log(randomNumber);
-        
+
     }
 
     
